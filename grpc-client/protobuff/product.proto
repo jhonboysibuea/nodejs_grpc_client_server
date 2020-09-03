@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message ProductDetailRequest {
+    string product_id = 1;
+}
+
+message ProductDetailResponse{
+    string message=1;
+    string status=2;
+    ProductDetailDto data=3;
+
+}
+
+message ProductDetailDto{
+    string product_id=1;
+    string product_name=2;
+}
+
+service ProductService {
+    rpc getProductDetail (ProductDetailRequest) returns (ProductDetailResponse);
+   
+}
