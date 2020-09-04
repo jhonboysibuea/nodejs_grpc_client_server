@@ -24,5 +24,5 @@ server.addService(product.ProductService.service, {
         callback(null, productResponse)
     },
 })
-console.log('Server running at http://127.0.0.1:50051')
+console.log('Server running at 127.0.0.1:6061')
 server.start()
